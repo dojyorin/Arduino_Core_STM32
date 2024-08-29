@@ -221,6 +221,11 @@ WEAK void SystemClock_Config(void)
                                              | RCC_PERIPHCLK_OSPI | RCC_PERIPHCLK_SDMMC1
                                              | RCC_PERIPHCLK_USB;
   PeriphClkInitStruct.AdcDacClockSelection = RCC_ADCDACCLKSOURCE_PLL2R;
+  PeriphClkInitStruct.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK3;
+  PeriphClkInitStruct.OspiClockSelection = RCC_OSPICLKSOURCE_HCLK;
+  PeriphClkInitStruct.Sdmmc1ClockSelection = RCC_SDMMC1CLKSOURCE_PLL1Q;
+  PeriphClkInitStruct.UsbClockSelection = RCC_USBCLKSOURCE_PLL3Q;
+
   PeriphClkInitStruct.PLL2.PLL2Source = RCC_PLL2_SOURCE_HSE;
   PeriphClkInitStruct.PLL2.PLL2M = 4;
   PeriphClkInitStruct.PLL2.PLL2N = 250;
@@ -231,9 +236,7 @@ WEAK void SystemClock_Config(void)
   PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2_VCORANGE_WIDE;
   PeriphClkInitStruct.PLL2.PLL2FRACN = 0;
   PeriphClkInitStruct.PLL2.PLL2ClockOut = RCC_PLL2_DIVR;
-  PeriphClkInitStruct.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK3;
-  PeriphClkInitStruct.OspiClockSelection = RCC_OSPICLKSOURCE_HCLK;
-  PeriphClkInitStruct.Sdmmc1ClockSelection = RCC_SDMMC1CLKSOURCE_PLL1Q;
+
   PeriphClkInitStruct.PLL3.PLL3Source = RCC_PLL3_SOURCE_HSE;
   PeriphClkInitStruct.PLL3.PLL3M = 4;
   PeriphClkInitStruct.PLL3.PLL3N = 250;
@@ -244,7 +247,6 @@ WEAK void SystemClock_Config(void)
   PeriphClkInitStruct.PLL3.PLL3VCOSEL = RCC_PLL3_VCORANGE_WIDE;
   PeriphClkInitStruct.PLL3.PLL3FRACN = 0;
   PeriphClkInitStruct.PLL3.PLL3ClockOut = RCC_PLL3_DIVQ;
-  PeriphClkInitStruct.UsbClockSelection = RCC_USBCLKSOURCE_PLL3Q;
 
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK) {
     Error_Handler();
