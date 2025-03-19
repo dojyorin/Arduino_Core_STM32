@@ -157,7 +157,8 @@
   #define PIN_SERIAL_TX         PA4
 #endif
 
-#define HSE_VALUE               24000000UL /*!< Value of the External oscillator in Hz */
+// Value of the HSE Bypass in Hz
+#define HSE_VALUE               24000000UL
 
 // Extra HAL modules
 #if !defined(HAL_DAC_MODULE_DISABLED)

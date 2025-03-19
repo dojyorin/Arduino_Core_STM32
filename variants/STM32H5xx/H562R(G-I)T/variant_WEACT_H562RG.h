@@ -222,6 +222,7 @@ P1                P2
   #define HAL_SD_MODULE_ENABLED
 #endif
 
+// Value of the HSE Bypass in Hz
 #define HSE_VALUE               8000000UL
 
 // SD card slot Definitions
