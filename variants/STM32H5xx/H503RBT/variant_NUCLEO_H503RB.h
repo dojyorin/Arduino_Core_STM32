@@ -10,7 +10,6 @@
  *
  *******************************************************************************
  */
-
 #pragma once
 
 /*----------------------------------------------------------------------------
@@ -157,13 +156,13 @@
   #define PIN_SERIAL_TX         PA4
 #endif
 
-// Value of the HSE Bypass in Hz
-#define HSE_VALUE               24000000UL
-
 // Extra HAL modules
 #if !defined(HAL_DAC_MODULE_DISABLED)
   #define HAL_DAC_MODULE_ENABLED
 #endif
+
+// Value of the HSE Bypass in Hz
+#define HSE_VALUE               24000000UL
 
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
