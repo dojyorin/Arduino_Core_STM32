@@ -312,9 +312,6 @@
   #define HAL_SD_MODULE_ENABLED
 #endif
 
-// Value of the HSE Bypass in Hz
-#define HSE_VALUE               25000000UL
-
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/
